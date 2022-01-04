@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kintampo Health Research Center</title>
+    <link rel="icon" type="image/gif/png" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./images/logo.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <button>Contact Us</button>
+        </ul>
+    </header>
+      <section class="banner">
+          <div class="imgBx">
+              <img src="./images/images.jpg" alt="" class="active">
+              <img src="./images/image1.jpg" alt="">
+              <img src="./images/image2.jpg" alt="" >
+          </div>
+
+          <div class="contentBx">
+              <div class="active">
+                <h2>Did You Know</h2>
+                <br>
+                <p>
+                    Omicron Variant Cases in Ghana Rise to 41. 
+                    Seven cases of the Omicron variant have been established within the Ghanaian population, taking the total number of positive cases in the country to 41.
+                    
+                </p> <br>
+                <a href="#">Details</a>
+              </div>
+              <div>
+                <h2>Did You Know ?</h2><br>
+                <p>
+                    Malaria Vaccine Endorsed To Protect African Children 
+                    The World Health Organisation (WHO) has approved the first-ever malaria vaccine that could save the lives of tens of thousands of children in Africa each year.                   
+                </p>
+                <br>
+                <a href="#">Details</a>
+              </div>
+              <div>
+                <h2>Did You Know !</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Libero quasi, placeat quod tempore, quidem aliquid quaerat laborum culpa doloremque non 
+                    error repudiandae dolorum officiis illo eaque nulla vitae sint deserunt.
+                </p>
+                <a href="#">Details</a>
+              </div>
+             
+          </div>
+          <ul class="controls">
+              <li onclick="PrevSlide();PrevSlideText();"></li>
+              <li onclick="nextSlide();nextSlideText();"></li>
+          </ul>
+      </section>
+
+      <section class="features">
+         <div class="container">
+             <h1 class="subheading">
+                    How we do
+             </h1>
+         </div>
+      </section>
+
+    <script type="text/javascript">
+        const imgBx = document.querySelector('.imgBx');
+        const slides = imgBx.getElementsByTagName('img');
+        var i = 0;
+
+
+         function nextSlide(){
+             
+             slides[i].classList.remove('active');
+             i = (i+1) % slides.length;
+             slides[i].classList.add('active');
+         }
+         function PrevSlide(){
+             
+             slides[i].classList.remove('active');
+             i = (i-1 + slides.length)%slides.length;
+             slides[i].classList.add('active');
+         }    
+
+        const contentBx = document.querySelector('.contentBx');
+        const slidesText = contentBx.getElementsByTagName('div');
+        var j = 0;
+
+
+         function nextSlideText(){
+             
+             slidesText[j].classList.remove('active');
+             j = (j+1) % slidesText.length;
+             slidesText[j].classList.add('active');
+         }
+         function PrevSlideText(){
+             
+             slidesText[j].classList.remove('active');
+             j = (j-1 + slidesText.length)%slidesText.length;
+             slidesText[j].classList.add('active');
+         }
+    </script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</body>
+</html>
